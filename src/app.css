@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Martel';
+    src: url('/fonts/Martel-Regular.woff2') format('woff2'),
+        url('/fonts/Martel-Regular.woff') format('woff'),
+        url('/fonts/Martel-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Martel Sans';
+    src: url('/fonts/MartelSans-Regular.woff2') format('woff2'),
+        url('/fonts/MartelSans-Regular.woff') format('woff'),
+        url('/fonts/MartelSans-Regular.ttf') format('truetype');
+}
+:root {
+  --accent: #CA522D;
+  --serif: 'Martel', serif;
+  --sans-serif: 'Martel Sans', sans-serif;
+}
+html {
+    font-family: var(--sans-serif);
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+section {
+    width: 100%;
+    text-align: center;
+}
+ul {
+    list-style: none;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+.button {
+    background: rgb(252,252,252);
+    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(204,204,204,0.5) 100%);
+    border: 1px solid #c4c4c4;
+    border-radius: 30px;
+    padding: 10px;
+}
+.button.disabled {
+    background: rgb(252,252,252);
+    opacity: 0.5;
+}
+
+
