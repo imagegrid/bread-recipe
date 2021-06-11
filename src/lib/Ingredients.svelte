@@ -53,7 +53,7 @@
 <section class="ingredients">
     <Subhead heading="Ingredients" />
 
-    <div class="ingredients-content">
+    <div class="ingredients-content" on:click={toggleMeasure}>
         <div class="ingredients-amounts">
             <ul>
                 <li>{metric ? `${flour}g` : `${flourCups} Cups`}</li>
@@ -74,9 +74,6 @@
                 <li>Fat</li>
             </ul>
         </div>
-    </div>
-    <div class="ingredients-measure">
-        <button class="button" on:click={toggleMeasure}>g/Cup</button>
     </div>
     {#if !metric}
         <FlourDropDown bind:flourGramsPerCup />
@@ -108,15 +105,6 @@
         padding: 0 5px;
         margin: 0;
         line-height: 1.4em;
-    }
-    .ingredients-measure {
-        margin-top: 15px;
-    }
-    .ingredients-measure button {
-        font-size: 16px;
-        padding-left: 15px;
-        padding-right: 15px;
-        cursor: pointer;
     }
     .asterisk {
         position: absolute;
