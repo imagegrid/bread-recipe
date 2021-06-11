@@ -29,12 +29,12 @@
         vertical-align: top;
         font-size: 100%;
         position: relative;
-        top: -6px;
+        top: -5px;
     }
     .ingredients-flour-note {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        margin: 20px 0 5px;
     }
     .ingredients-flour-note p {
         margin: 2px 0 0;
