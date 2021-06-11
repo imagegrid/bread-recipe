@@ -27,9 +27,9 @@
 <style>
     sup {
         vertical-align: top;
-        font-size: 120%;
+        font-size: 100%;
         position: relative;
-        top: -8px;
+        top: -6px;
     }
     .ingredients-flour-note {
         display: flex;

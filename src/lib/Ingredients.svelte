@@ -56,8 +56,8 @@
     <div class="ingredients-content">
         <div class="ingredients-amounts">
             <ul>
-                <li>{metric ? water : waterCups}{metric ? 'g' : ' Cups'}</li>
                 <li>{metric ? `${flour}g` : `${flourCups} Cups`}</li>
+                <li>{metric ? water : waterCups}{metric ? 'g' : ' Cups'}</li>
                 <li>{metric ? yeast : yeastTeaspoons}{metric ? 'g' : ' Tsp'}</li>
                 <li>{metric ? salt : saltTeaspoons}{metric ? 'g' : ' Tsp'}</li>
                 <li>{metric ? fat : fatTeaspoons}{metric ? 'g' : ' Tsp'}</li>
@@ -65,10 +65,10 @@
         </div>
         <div class="ingredients-names">
             <ul>
-                <li>Water</li>
                 <li>
                     Flour{#if !metric}<span class="asterisk">*</span>{/if}
                 </li>
+                <li>Water</li>
                 <li>Yeast</li>
                 <li>Salt</li>
                 <li>Fat</li>
@@ -116,11 +116,12 @@
         font-size: 16px;
         padding-left: 15px;
         padding-right: 15px;
+        cursor: pointer;
     }
     .asterisk {
         position: absolute;
         top: -5px;
-        right: -15px;
+        right: 0px;
         font-size: 75%;
     }
 </style>
