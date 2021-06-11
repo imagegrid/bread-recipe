@@ -40,6 +40,12 @@ main {
     border: 1px solid #c4c4c4;
     border-radius: 30px;
     padding: 10px;
+    text-decoration: none;
+}
+.button.small {
+    font-size: 80%;
+    padding:6px 8px;
+    text-decoration: none;
 }
 .button.disabled {
     background: rgb(252,252,252);

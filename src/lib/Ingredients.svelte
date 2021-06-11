@@ -6,6 +6,7 @@
     export let loaves: number;
 
     let metric = true;
+    let instructions = false;
     let flourGramsPerCup = 140;
     const waterGramsPerCup = 236;
     const saltGramsPerTeaspoon = 6;
@@ -39,11 +40,22 @@
 
         return `${Math.round(c) || ''}${fraction}`;
     }
+    function hideInstructions() {
+        instructions = false;
+        localStorage.setItem('instructions', 'false');
+    }
     function toggleMeasure() {
         metric = !metric;
+        hideInstructions();
         localStorage.setItem('metric', metric.toString());
     }
     onMount(() => {
+        instructions = true;
+        setTimeout(hideInstructions, 30 * 1000);
+
+        if (localStorage.getItem('instructions')) {
+            instructions = localStorage.getItem('instructions') === 'true';
+        }
         if (localStorage.getItem('metric')) {
             metric = localStorage.getItem('metric') === 'true';
         }
@@ -75,6 +87,12 @@
             </ul>
         </div>
     </div>
+    {#if instructions}
+        <div class="instructions" on:click={toggleMeasure}>
+            <img src="/icons/chevron-up.svg" alt="" />
+            <p>Tap to convert from Grams to Cups</p>
+        </div>
+    {/if}
     {#if !metric}
         <FlourDropDown bind:flourGramsPerCup />
     {/if}
@@ -84,6 +102,7 @@
     .ingredients-content {
         display: flex;
         justify-content: center;
+        cursor: pointer;
     }
     .ingredients-amounts,
     .ingredients-names {
@@ -111,5 +130,17 @@
         top: -5px;
         right: 0px;
         font-size: 75%;
+    }
+    .instructions {
+        color: #000000;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+    .instructions img {
+        margin-bottom: -4px;
+    }
+    .instructions p {
+        line-height: 1.3;
+        margin: 0;
     }
 </style>
