@@ -3,14 +3,13 @@
     import Directions from '$lib/Directions.svelte';
     import Makes from '$lib/Makes.svelte';
     import Header from '$lib/Header.svelte';
+    import storage from '$lib/storage';
     import { onMount } from 'svelte';
 
     let loaves: number = 1;
 
     onMount(() => {
-        if (localStorage.getItem('loaves')) {
-            loaves = parseInt(localStorage.getItem('loaves'));
-        }
+        loaves = storage.get('loaves', 1);
     });
 </script>
 

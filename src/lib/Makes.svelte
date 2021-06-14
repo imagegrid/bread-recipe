@@ -1,17 +1,18 @@
 <script lang="ts">
     import Subhead from './Subhead.svelte';
     import Button from './Button.svelte';
+    import storage from '$lib/storage';
 
     export let loaves: number;
 
     function increment() {
         loaves++;
-        localStorage.setItem('loaves', loaves.toString());
+        storage.set('loaves', loaves.toString());
     }
     function decrement() {
         if (loaves > 1) {
             loaves--;
-            localStorage.setItem('loaves', loaves.toString());
+            storage.set('loaves', loaves.toString());
         }
     }
 </script>

@@ -1,8 +1,9 @@
 <script lang="ts">
     import Subhead from './Subhead.svelte';
     import FlourDropDown from './FlourDropDown.svelte';
-    import { onMount } from 'svelte';
     import Button from './Button.svelte';
+    import storage from '$lib/storage';
+    import { onMount } from 'svelte';
 
     export let loaves: number;
 
@@ -42,12 +43,10 @@
     }
     function toggleMeasure() {
         metric = !metric;
-        localStorage.setItem('metric', metric.toString());
+        storage.set('metric', metric.toString());
     }
     onMount(() => {
-        if (localStorage.getItem('metric')) {
-            metric = localStorage.getItem('metric') === 'true';
-        }
+        metric = storage.get('metric', 'true');
     });
 </script>
 

@@ -1,15 +1,15 @@
 <script>
     import { onMount } from 'svelte';
+    import storage from '$lib/storage';
 
     export let flourGramsPerCup;
 
     function handleChange() {
-        localStorage.setItem('flourGramsPerCup', flourGramsPerCup.toString());
+        storage.set('flourGramsPerCup', flourGramsPerCup.toString());
     }
     onMount(() => {
-        if (localStorage.getItem('flourGramsPerCup')) {
-            flourGramsPerCup = parseInt(localStorage.getItem('flourGramsPerCup'));
-        }
+        flourGramsPerCup = storage.get('flourGramsPerCup', 140);
+        console.log(`flourGramsPerCup`, typeof flourGramsPerCup);
     });
 </script>
 
