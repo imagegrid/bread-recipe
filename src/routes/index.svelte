@@ -18,6 +18,3 @@
 <Ingredients {loaves} />
 <Makes bind:loaves />
 <Directions />
-
-<style>
-</style>
