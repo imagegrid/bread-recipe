@@ -1,5 +1,7 @@
 <script lang="ts">
     import Subhead from './Subhead.svelte';
+    import Button from './Button.svelte';
+
     export let loaves: number;
 
     function increment() {
@@ -17,9 +19,9 @@
 <section class="serving">
     <Subhead heading="Makes" />
     <div class="ingredients-buttons">
-        <a class="button" href={''} on:click|preventDefault={decrement} class:disabled={loaves === 1}><img src="/icons/minus.svg" alt="minus" /></a>
-        <p class="loaf-total">{loaves}</p>
-        <a class="button" href={''} on:click|preventDefault={increment}><img src="/icons/plus.svg" alt="plus" /></a>
+        <Button on:clicked={decrement} isRound={true} disabled={loaves === 1}><img src="/icons/minus.svg" alt="minus" /></Button>
+        <p class="loaf-total ">{loaves}</p>
+        <Button on:clicked={increment} isRound={true}><img src="/icons/plus.svg" alt="plus" /></Button>
     </div>
     <p class="serving-size">750g Loa{loaves > 1 ? 'ves' : 'f'}</p>
 </section>
@@ -35,13 +37,6 @@
     .ingredients-buttons {
         display: flex;
         justify-content: center;
-    }
-    .ingredients-buttons a {
-        height: 20px;
-        width: 20px;
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
     }
     .loaf-total {
         font-family: var(--serif);

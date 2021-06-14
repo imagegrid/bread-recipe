@@ -2,6 +2,7 @@
     import Subhead from './Subhead.svelte';
     import FlourDropDown from './FlourDropDown.svelte';
     import { onMount } from 'svelte';
+    import Button from './Button.svelte';
 
     export let loaves: number;
 
@@ -76,7 +77,7 @@
         </div>
     </div>
     <div class="ingredients-convert">
-        <a href={''} class="button small" on:click={toggleMeasure}><img src="/icons/refresh-cw.svg" alt="convert" />g/Cup</a>
+        <Button on:clicked={toggleMeasure} isSmall={true}><img src="/icons/refresh-cw.svg" alt="convert" /> g/Cup</Button>
     </div>
     {#if !metric}
         <FlourDropDown bind:flourGramsPerCup />
@@ -113,9 +114,7 @@
         display: flex;
         justify-content: center;
     }
-    .ingredients-convert a {
-        display: flex;
-        justify-content: center;
+    .ingredients-convert {
         margin-top: 15px;
     }
     .ingredients-convert a img {
