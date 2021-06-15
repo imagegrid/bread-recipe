@@ -76,7 +76,7 @@
         </div>
     </div>
     <div class="ingredients-convert">
-        <Button on:clicked={toggleMeasure} isSmall={true}><img src="/icons/refresh-cw.svg" alt="convert" /> g/Cup</Button>
+        <Button on:clicked={toggleMeasure} small={true}><img src="/icons/refresh-cw.svg" alt="convert" /> g/Cup</Button>
     </div>
     {#if !metric}
         <FlourDropDown bind:flourGramsPerCup />

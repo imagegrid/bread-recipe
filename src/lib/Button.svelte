@@ -2,8 +2,8 @@
     import { createEventDispatcher } from 'svelte';
 
     export let disabled = false;
-    export let isRound = false;
-    export let isSmall = false;
+    export let round = false;
+    export let small = false;
 
     const dispatch = createEventDispatcher();
 
@@ -12,7 +12,7 @@
     }
 </script>
 
-<a class="button" on:click={clicked} class:is-round={isRound} class:is-small={isSmall} href={''} class:disabled><slot /></a>
+<a class="button" on:click={clicked} class:round class:small href={''} class:disabled><slot /></a>
 
 <style>
     .button {
@@ -27,10 +27,10 @@
         text-decoration: none;
         user-select: none;
     }
-    .button.is-small {
+    .button.small {
         padding: 4px 12px;
     }
-    .button.is-round {
+    .button.round {
         padding: 10px;
     }
     .button.disabled {

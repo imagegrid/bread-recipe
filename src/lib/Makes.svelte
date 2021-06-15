@@ -20,9 +20,9 @@
 <section class="serving">
     <Subhead heading="Makes" />
     <div class="ingredients-buttons">
-        <Button on:clicked={decrement} isRound={true} disabled={loaves === 1}><img src="/icons/minus.svg" alt="minus" /></Button>
+        <Button on:clicked={decrement} round={true} disabled={loaves === 1}><img src="/icons/minus.svg" alt="minus" /></Button>
         <p class="loaf-total ">{loaves}</p>
-        <Button on:clicked={increment} isRound={true}><img src="/icons/plus.svg" alt="plus" /></Button>
+        <Button on:clicked={increment} round={true}><img src="/icons/plus.svg" alt="plus" /></Button>
     </div>
     <p class="serving-size">750g Loa{loaves > 1 ? 'ves' : 'f'}</p>
 </section>
