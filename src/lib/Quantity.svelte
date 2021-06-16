@@ -28,9 +28,6 @@
 </section>
 
 <style>
-    .serving {
-        margin-bottom: 10px;
-    }
     .serving-size {
         padding: 0;
         margin: 10px 0 0;

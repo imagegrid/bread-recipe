@@ -1,7 +1,7 @@
 <script lang="ts">
     import Ingredients from '$lib/Ingredients.svelte';
     import Directions from '$lib/Directions.svelte';
-    import Makes from '$lib/Makes.svelte';
+    import Quantity from '$lib/Quantity.svelte';
     import Header from '$lib/Header.svelte';
     import storage from '$lib/storage';
     import { onMount } from 'svelte';
@@ -15,5 +15,5 @@
 
 <Header topText="The Ultimate">Bread Recipe</Header>
 <Ingredients {loaves} />
-<Makes bind:loaves />
+<Quantity bind:loaves />
 <Directions />
