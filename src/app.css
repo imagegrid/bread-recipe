@@ -15,17 +15,21 @@
   --serif: 'Martel', serif;
   --sans-serif: 'Martel Sans', sans-serif;
 }
-html {
-    font-family: var(--sans-serif);
-    color: #000;
+html, body {
     margin: 0;
     padding: 0;
 }
-
+html {
+    font-family: var(--sans-serif);
+    color: #000;
+}
 header,
 section {
     width: 100%;
     text-align: center;
+}
+section {
+    margin-bottom: 5px;
 }
 ul {
     list-style: none;
