@@ -29,7 +29,7 @@
         text-align: left;
         width: 350px;
         line-height: 1.5em;
-        padding: 0 15px;
+        padding: 0 30px 10px;
         margin: 5px 0 0;
     }
     .directions-list ol li {

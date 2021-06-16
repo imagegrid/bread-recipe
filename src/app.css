@@ -23,6 +23,9 @@ html {
     font-family: var(--sans-serif);
     color: #000;
 }
+body {
+    margin-top: 10px;
+}
 header,
 section {
     width: 100%;
