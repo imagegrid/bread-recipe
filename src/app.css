@@ -3,6 +3,7 @@
     src: url('/fonts/Martel-Regular.woff2') format('woff2'),
         url('/fonts/Martel-Regular.woff') format('woff'),
         url('/fonts/Martel-Regular.ttf') format('truetype');
+    
 }
 @font-face {
     font-family: 'Martel Sans';
@@ -10,6 +11,7 @@
         url('/fonts/MartelSans-Regular.woff') format('woff'),
         url('/fonts/MartelSans-Regular.ttf') format('truetype');
 }
+
 :root {
   --accent: #CA522D;
   --serif: 'Martel', serif;

@@ -26,10 +26,10 @@
         margin: 0;
         padding: 0 15px;
         height: 20px;
-        font-size: 16px;
+        font-size: 18px;
+        letter-spacing: 1px;
         font-family: var(--sans-serif);
         text-transform: uppercase;
-        letter-spacing: 2px;
         position: relative;
         bottom: -22px;
         background-color: #fff;

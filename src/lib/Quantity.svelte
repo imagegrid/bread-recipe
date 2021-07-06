@@ -29,6 +29,7 @@
 
 <style>
     .serving-size {
+        font-size: 16px;
         padding: 0;
         margin: 10px 0 0;
     }

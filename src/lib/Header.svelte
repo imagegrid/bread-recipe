@@ -10,15 +10,15 @@
     h1 {
         font-family: var(--serif);
         text-transform: uppercase;
-        font-size: 36px;
+        font-size: 35px;
         line-height: 1.3;
         margin-bottom: 0;
     }
     h1 span {
-        font-size: 16px;
+        font-size: 18px;
         font-family: var(--sans-serif);
         text-transform: uppercase;
         display: block;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
     }
 </style>
