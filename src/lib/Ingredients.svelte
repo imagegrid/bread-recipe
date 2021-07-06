@@ -22,7 +22,7 @@
     $: flour = Math.round((water * 1.6) / 10) * 10; /* 5:3 flour to water */
     $: salt = Math.round(flour * 0.02); /* 2% of flour */
     $: yeast = 8 * loaves; /* yeast sold in 8 gram packets. */
-    $: fat = Math.round(flour * 0.03); /* 3% of flour */
+    $: fat = Math.round(flour * 0.02); /* 2% of flour */
 
     $: waterCups = convertToCups(water, waterGramsPerCup);
     $: flourCups = convertToCups(flour, flourGramsPerCup);
@@ -56,20 +56,20 @@
     <div class="ingredients-content">
         <div class="ingredients-amounts">
             <ul>
-                <li>{metric ? `${flour}g` : `${flourCups} Cups`}</li>
-                <li>{metric ? water : waterCups}{metric ? 'g' : ' Cups'}</li>
-                <li>{metric ? yeast : yeastTeaspoons}{metric ? 'g' : ' Tsp'}</li>
-                <li>{metric ? salt : saltTeaspoons}{metric ? 'g' : ' Tsp'}</li>
-                <li>{metric ? fat : fatTeaspoons}{metric ? 'g' : ' Tsp'}</li>
+                <li>{metric ? yeast : yeastTeaspoons}{metric ? ' g' : ' Tsp'}</li>
+                <li>{metric ? water : waterCups}{metric ? ' g' : ' Cups'}</li>
+                <li>{metric ? `${flour}` : `${flourCups}`}{metric ? ` g` : ` Cups`}</li>
+                <li>{metric ? salt : saltTeaspoons}{metric ? ' g' : ' Tsp'}</li>
+                <li>{metric ? fat : fatTeaspoons}{metric ? ' g' : ' Tsp'}</li>
             </ul>
         </div>
         <div class="ingredients-names">
             <ul>
+                <li>Yeast</li>
+                <li>Water</li>
                 <li>
                     Flour{#if !metric}<span class="asterisk">*</span>{/if}
                 </li>
-                <li>Water</li>
-                <li>Yeast</li>
                 <li>Salt</li>
                 <li>Fat</li>
             </ul>
@@ -90,15 +90,14 @@
     }
     .ingredients-amounts,
     .ingredients-names {
-        font-size: 34px;
+        font-size: 32px;
         letter-spacing: -1px;
         font-family: var(--serif);
         white-space: nowrap;
-        position: relative;
     }
     .ingredients-amounts {
-        color: var(--accent);
         text-align: right;
+        color: var(--accent);
     }
     .ingredients-names {
         text-align: left;
@@ -107,7 +106,10 @@
     .ingredients ul {
         padding: 0 5px;
         margin: 0;
-        line-height: 1.4em;
+        line-height: 1.3em;
+    }
+    .ingredients li {
+        position: relative;
     }
     .ingredients-convert {
         display: flex;
@@ -122,7 +124,7 @@
     .asterisk {
         position: absolute;
         top: -5px;
-        right: 0px;
+        right: -5px;
         font-size: 75%;
     }
 </style>
