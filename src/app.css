@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans&family=Martel:wght@700&display=swap');
 
 :root {
   --accent: #CA522D;
-  --sans-serif: 'Varela', sans-serif;
+  --sans-serif: 'Martel Sans', sans-serif;
+  --serif: 'Martel', sans-serif;
 }
 html, body {
     margin: 0;

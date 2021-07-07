@@ -13,7 +13,7 @@
     });
 </script>
 
-<Header topText="The Ultimate">Bread Recipe</Header>
+<Header topText="The ultimate">Bread Recipe</Header>
 <Ingredients {loaves} />
 <Quantity bind:loaves />
 <Directions />

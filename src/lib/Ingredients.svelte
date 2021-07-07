@@ -52,7 +52,6 @@
 
 <section class="ingredients">
     <Subhead heading="Ingredients" />
-
     <div class="ingredients-content">
         <div class="ingredients-amounts">
             <ul>
@@ -90,7 +89,7 @@
     }
     .ingredients-amounts,
     .ingredients-names {
-        font-size: 32px;
+        font-size: 36px;
         letter-spacing: -1px;
         font-family: var(--sans-serif);
         white-space: nowrap;
@@ -106,7 +105,7 @@
     .ingredients ul {
         padding: 0 5px;
         margin: 0;
-        line-height: 1.3em;
+        line-height: 1.2em;
     }
     .ingredients li {
         position: relative;

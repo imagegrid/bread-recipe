@@ -3,22 +3,23 @@
 </script>
 
 <header>
-    <h1><span>{topText}</span> <slot>Bread Recipe</slot></h1>
+    <h1><span>{topText}</span> <slot /></h1>
 </header>
 
 <style>
     h1 {
-        font-family: var(--sans-serif);
-        text-transform: uppercase;
-        font-size: 35px;
-        line-height: 1.3;
-        margin-bottom: 0;
+        font-family: var(--serif);
+        font-size: 48px;
+        line-height: 0.8;
+        margin: 1.5rem 0 0;
+        letter-spacing: -2px;
     }
     h1 span {
         font-size: 18px;
-        font-family: var(--sans-serif);
+        font-family: var(--serif);
         text-transform: uppercase;
         display: block;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
+        margin-bottom: 1.2rem;
     }
 </style>
