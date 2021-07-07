@@ -26,7 +26,7 @@
         margin: 0;
         padding: 0 15px;
         height: 20px;
-        font-size: 18px;
+        font-size: 16px;
         letter-spacing: 1px;
         font-family: var(--sans-serif);
         text-transform: uppercase;

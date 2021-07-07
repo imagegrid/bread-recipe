@@ -92,7 +92,7 @@
     .ingredients-names {
         font-size: 32px;
         letter-spacing: -1px;
-        font-family: var(--serif);
+        font-family: var(--sans-serif);
         white-space: nowrap;
     }
     .ingredients-amounts {
@@ -124,7 +124,7 @@
     .asterisk {
         position: absolute;
         top: -5px;
-        right: -5px;
+        right: 0px;
         font-size: 75%;
     }
 </style>

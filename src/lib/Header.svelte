@@ -8,7 +8,7 @@
 
 <style>
     h1 {
-        font-family: var(--serif);
+        font-family: var(--sans-serif);
         text-transform: uppercase;
         font-size: 35px;
         line-height: 1.3;
@@ -19,6 +19,6 @@
         font-family: var(--sans-serif);
         text-transform: uppercase;
         display: block;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
     }
 </style>

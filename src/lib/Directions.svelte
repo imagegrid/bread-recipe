@@ -24,11 +24,12 @@
         justify-content: center;
     }
     .directions-list ol {
+        font-size: 16px;
         list-style-position: inside;
-        font-family: var(--serif);
+        font-family: var(--sans-serif);
         text-align: left;
         width: 350px;
-        line-height: 1.5em;
+        line-height: 1.4em;
         padding: 0 30px 10px;
         margin: 5px 0 0;
     }

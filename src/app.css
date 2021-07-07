@@ -1,21 +1,8 @@
-@font-face {
-    font-family: 'Martel';
-    src: url('/fonts/Martel-Regular.woff2') format('woff2'),
-        url('/fonts/Martel-Regular.woff') format('woff'),
-        url('/fonts/Martel-Regular.ttf') format('truetype');
-    
-}
-@font-face {
-    font-family: 'Martel Sans';
-    src: url('/fonts/MartelSans-Regular.woff2') format('woff2'),
-        url('/fonts/MartelSans-Regular.woff') format('woff'),
-        url('/fonts/MartelSans-Regular.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
 
 :root {
   --accent: #CA522D;
-  --serif: 'Martel', serif;
-  --sans-serif: 'Martel Sans', sans-serif;
+  --sans-serif: 'Varela', sans-serif;
 }
 html, body {
     margin: 0;

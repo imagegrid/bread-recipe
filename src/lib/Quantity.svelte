@@ -38,7 +38,7 @@
         justify-content: center;
     }
     .loaf-total {
-        font-family: var(--serif);
+        font-family: var(--sans-serif);
         color: var(--accent);
         font-size: 36px;
         margin: -10px 15px;
