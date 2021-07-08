@@ -12,7 +12,7 @@
     }
 </script>
 
-<a class="button" on:click={clicked} class:round class:small href={''} class:disabled><slot /></a>
+<a href={''} class="button noselect" on:click={clicked} class:round class:small class:disabled><slot /></a>
 
 <style>
     .button {
@@ -26,6 +26,9 @@
         padding: 5px 15px;
         text-decoration: none;
         user-select: none;
+    }
+    .button:active {
+        background: rgb(224, 224, 224);
     }
     .button.small {
         padding: 4px 12px;

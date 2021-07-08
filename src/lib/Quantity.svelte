@@ -21,10 +21,10 @@
     <Subhead heading="Makes" />
     <div class="ingredients-buttons">
         <Button on:clicked={decrement} round={true} disabled={loaves === 1}><img src="/icons/minus.svg" alt="minus" /></Button>
-        <p class="loaf-total ">{loaves}</p>
+        <p class="loaf-total noselect">{loaves}</p>
         <Button on:clicked={increment} round={true}><img src="/icons/plus.svg" alt="plus" /></Button>
     </div>
-    <p class="serving-size">750g Loa{loaves > 1 ? 'ves' : 'f'}</p>
+    <p class="serving-size noselect">750g Loa{loaves > 1 ? 'ves' : 'f'}</p>
 </section>
 
 <style>
