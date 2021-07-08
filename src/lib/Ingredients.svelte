@@ -67,7 +67,7 @@
                 <li>Yeast</li>
                 <li>Water</li>
                 <li>
-                    Flour{#if !metric}<span class="asterisk">*</span>{/if}
+                    Flour{#if !metric}<sup class="asterisk">*</sup>{/if}
                 </li>
                 <li>Salt</li>
                 <li>Fat</li>
@@ -90,7 +90,6 @@
     .ingredients-amounts,
     .ingredients-names {
         font-size: 36px;
-        letter-spacing: -1px;
         font-family: var(--sans-serif);
         white-space: nowrap;
     }
@@ -108,6 +107,7 @@
         line-height: 1.2em;
     }
     .ingredients li {
+        letter-spacing: -1px;
         position: relative;
     }
     .ingredients-convert {
@@ -122,8 +122,8 @@
     }
     .asterisk {
         position: absolute;
-        top: -5px;
-        right: 0px;
+        top: -8px;
+        right: 3px;
         font-size: 75%;
     }
 </style>
