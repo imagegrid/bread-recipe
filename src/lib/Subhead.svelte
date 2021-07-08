@@ -3,7 +3,7 @@
 </script>
 
 <div class="subhead">
-    <div class="subhead-inner">
+    <div class="subhead-inner noselect">
         <h2>{heading}</h2>
     </div>
 </div>
