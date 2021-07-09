@@ -30,8 +30,9 @@
         text-align: left;
         width: 350px;
         line-height: 1.4em;
-        padding: 0 30px 10px;
+        padding: 0 25px 10px 50px;
         margin: 5px 0 0;
+        list-style-position: outside;
     }
     .directions-list ol li {
         margin-bottom: 0.75em;
