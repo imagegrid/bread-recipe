@@ -21,7 +21,7 @@
         font-weight: 700;
         text-transform: uppercase;
         display: block;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
         margin-bottom: 1.2rem;
     }
 </style>
