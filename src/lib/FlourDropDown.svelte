@@ -13,14 +13,14 @@
 </script>
 
 <div class="ingredients-note" on:change={handleChange}>
-    <p><strong><sup>&dagger;</sup></strong></p>
+    <p><strong><sup>&dagger;</sup></strong> Using</p>
     <select bind:value={flourGramsPerCup} name="flourGramsPerCup">
         <option value={120}>120g</option>
         <option value={130}>130g</option>
         <option value={140} selected>140g</option>
         <option value={150}>150g</option>
     </select>
-    <p>flour per cup</p>
+    <p>per cup</p>
 </div>
 
 <style>

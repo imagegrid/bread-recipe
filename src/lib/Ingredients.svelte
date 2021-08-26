@@ -35,13 +35,16 @@
     function convertToCups(grams: number, gramsPerCup: number): string {
         let fraction = '';
         const num = (Math.round((grams / gramsPerCup) * 4) / 4).toFixed(2);
+        console.log(num);
 
         const c = parseFloat(num);
+        console.log(c);
+
         if (c % 1 === 0.25) fraction = '¼';
         if (c % 1 === 0.5) fraction = '½';
         if (c % 1 === 0.75) fraction = '¾';
 
-        return `${Math.round(c) || ''}${fraction}`;
+        return `${Math.floor(c) || ''}${fraction}`;
     }
     function toggleMeasure() {
         metric = !metric;
