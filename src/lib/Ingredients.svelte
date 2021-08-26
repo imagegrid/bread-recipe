@@ -19,7 +19,7 @@
     vary somewhat depending on the type of flour used.  */
 
     $: water = Math.round(290 * loaves); /* 1g = 1ml water */
-    $: flour = Math.round((water * 1.6) / 10) * 10; /* 5:3 flour to water */
+    $: flour = Math.round((water * 1.65) / 10) * 10; /* 65% hydration */
     $: salt = Math.round(flour * 0.02); /* 2% of flour */
     $: yeast = 8 * loaves; /* yeast sold in 8 gram packets. */
     $: fat = Math.round(flour * 0.02); /* 2% of flour */
