@@ -7,12 +7,12 @@
 
     function increment() {
         loaves++;
-        storage.set('loaves', loaves.toString());
+        storage.set('loaves', loaves);
     }
     function decrement() {
         if (loaves > 1) {
             loaves--;
-            storage.set('loaves', loaves.toString());
+            storage.set('loaves', loaves);
         }
     }
 </script>

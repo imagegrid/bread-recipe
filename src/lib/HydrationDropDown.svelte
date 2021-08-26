@@ -2,25 +2,28 @@
     import { onMount } from 'svelte';
     import storage from '$lib/storage';
 
-    export let flourGramsPerCup: number;
+    export let hydration;
 
     function handleChange() {
-        storage.set('flourGramsPerCup', flourGramsPerCup);
+        storage.set('hydration', hydration);
     }
     onMount(() => {
-        flourGramsPerCup = storage.get('flourGramsPerCup') || 140;
+        hydration = storage.get('hydration') || 0.65;
     });
 </script>
 
 <div class="ingredients-note" on:change={handleChange}>
-    <p><strong><sup>&dagger;</sup></strong></p>
-    <select bind:value={flourGramsPerCup} name="flourGramsPerCup">
-        <option value={120}>120g</option>
-        <option value={130}>130g</option>
-        <option value={140} selected>140g</option>
-        <option value={150}>150g</option>
+    <p><strong><sup>*</sup></strong> Using</p>
+    <select bind:value={hydration} name="hydration">
+        <option value={0.5}>50%</option>
+        <option value={0.55}>55%</option>
+        <option value={0.6}>60%</option>
+        <option value={0.65} selected>65%</option>
+        <option value={0.7}>70%</option>
+        <option value={0.75}>75%</option>
+        <option value={0.8}>80%</option>
     </select>
-    <p>flour per cup</p>
+    <p>Hydration</p>
 </div>
 
 <style>
@@ -33,7 +36,7 @@
     .ingredients-note {
         display: flex;
         justify-content: center;
-        margin: 20px 0 5px;
+        margin: 30px 0 5px;
     }
     .ingredients-note p {
         margin: 2px 0 0;

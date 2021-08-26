@@ -1,6 +1,7 @@
 <script lang="ts">
     import Subhead from './Subhead.svelte';
     import FlourDropDown from './FlourDropDown.svelte';
+    import HydrationDropDown from './HydrationDropDown.svelte';
     import Button from './Button.svelte';
     import storage from '$lib/storage';
     import { onMount } from 'svelte';
@@ -9,6 +10,7 @@
 
     let metric = true;
     let flourGramsPerCup = 140;
+    let hydration = 0.65;
     const waterGramsPerCup = 236;
     const saltGramsPerTeaspoon = 6;
     const yeastGramsPerTeaspoon = 3;
@@ -18,8 +20,8 @@
     It produces an average sized loaf of around 750g, which may
     vary somewhat depending on the type of flour used.  */
 
-    $: water = Math.round(290 * loaves); /* 1g = 1ml water */
-    $: flour = Math.round((water * 1.55) / 10) * 10; /* 65% hydration */
+    $: flour = Math.round(450 * loaves);
+    $: water = Math.round((flour * hydration) / 10) * 10;
     $: salt = Math.round(flour * 0.02); /* 2% of flour */
     $: yeast = 8 * loaves; /* yeast sold in 8 gram packets. */
     $: fat = Math.round(flour * 0.02); /* 2% of flour */
@@ -43,10 +45,10 @@
     }
     function toggleMeasure() {
         metric = !metric;
-        storage.set('metric', metric.toString());
+        storage.set('metric', metric);
     }
     onMount(() => {
-        metric = storage.get('metric', 'true');
+        metric = storage.get('metric') || true;
     });
 </script>
 
@@ -65,9 +67,9 @@
         <div class="ingredients-names">
             <ul>
                 <li>Yeast</li>
-                <li>Water</li>
+                <li>Water<span>*</span></li>
                 <li>
-                    Flour{#if !metric}<sup class="asterisk">*</sup>{/if}
+                    Flour{#if !metric}<span>&dagger;</span>{/if}
                 </li>
                 <li>Salt</li>
                 <li>Fat</li>
@@ -77,6 +79,7 @@
     <div class="ingredients-convert">
         <Button on:clicked={toggleMeasure} small={true}><img src="/icons/refresh-cw.svg" alt="convert" /> g/Cup</Button>
     </div>
+    <HydrationDropDown bind:hydration />
     {#if !metric}
         <FlourDropDown bind:flourGramsPerCup />
     {/if}
@@ -120,10 +123,10 @@
     .ingredients-convert a img {
         margin-right: 8px;
     }
-    .asterisk {
-        position: absolute;
-        top: -8px;
-        right: 3px;
-        font-size: 75%;
+    .ingredients-names li span {
+        position: relative;
+        top: -12px;
+        right: -5px;
+        font-size: 60%;
     }
 </style>

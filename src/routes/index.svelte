@@ -9,7 +9,7 @@
     let loaves: number = 1;
 
     onMount(() => {
-        loaves = storage.get('loaves', 1);
+        loaves = storage.get('loaves') || 1;
     });
 </script>
 

@@ -1,22 +1,17 @@
-function get(name: string, defaultValue: any): any {
-    const item = localStorage.getItem(name);
-    if (item) {
-        // Integer
-        if (Number.isInteger(parseInt(item))) {
-            return parseInt(localStorage.getItem(name));
-        }
-        // Boolean
-        if (item === 'true' || item === 'false') {
-            return localStorage.getItem(name) === 'true';
-        }
-        // String
-        return localStorage.getItem(name);
+function get(name: string): any {
+
+    let settings = JSON.parse(localStorage.getItem('settings'));
+    if (settings) {
+        return settings[name];
     }
-    return defaultValue;
+    return null;
 }
 
-function set(name: string, value: string): void {
-    return localStorage.setItem(name, value);
+function set(name: string, value: number | string | boolean): void {
+
+    let settings: Settings = JSON.parse(localStorage.getItem('settings'));
+    localStorage.setItem('settings', JSON.stringify({ ...settings, [name]: value }));
+
 }
 
 export default {
