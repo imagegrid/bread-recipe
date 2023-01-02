@@ -9,7 +9,7 @@
     export let loaves: number;
 
     let metric = true;
-    let flourGramsPerCup = 140;
+    let flourGramsPerCup = 130;
     let hydration = 0.65;
     const waterGramsPerCup = 236;
     const saltGramsPerTeaspoon = 6;
