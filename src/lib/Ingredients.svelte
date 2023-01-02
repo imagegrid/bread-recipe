@@ -48,7 +48,7 @@
         storage.set('metric', metric);
     }
     onMount(() => {
-        metric = storage.get('metric') || true;
+        metric = storage.get('metric') === false ? false : true;
     });
 </script>
 
