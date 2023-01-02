@@ -1,7 +1,7 @@
 <script lang="ts">
     import Subhead from './Subhead.svelte';
     import Button from './Button.svelte';
-    import storage from '$lib/storage';
+    import storage from './storage';
 
     export let loaves: number;
 

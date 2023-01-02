@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import storage from '$lib/storage';
+    import storage from './storage';
 
     export let hydration;
 
@@ -8,7 +8,7 @@
         storage.set('hydration', hydration);
     }
     onMount(() => {
-        hydration = storage.get('hydration') || 0.65;
+        hydration = storage.get('hydration') || hydration;
     });
 </script>
 
@@ -18,7 +18,7 @@
         <option value={0.5}>50%</option>
         <option value={0.55}>55%</option>
         <option value={0.6}>60%</option>
-        <option value={0.65} selected>65%</option>
+        <option value={0.65}>65%</option>
         <option value={0.7}>70%</option>
         <option value={0.75}>75%</option>
         <option value={0.8}>80%</option>

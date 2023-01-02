@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import storage from '$lib/storage';
+    import storage from './storage';
 
     export let flourGramsPerCup: number;
 
@@ -8,7 +8,7 @@
         storage.set('flourGramsPerCup', flourGramsPerCup);
     }
     onMount(() => {
-        flourGramsPerCup = storage.get('flourGramsPerCup') || 140;
+        flourGramsPerCup = storage.get('flourGramsPerCup') || flourGramsPerCup;
     });
 </script>
 
@@ -17,7 +17,7 @@
     <select bind:value={flourGramsPerCup} name="flourGramsPerCup">
         <option value={120}>120g</option>
         <option value={130}>130g</option>
-        <option value={140} selected>140g</option>
+        <option value={140}>140g</option>
         <option value={150}>150g</option>
     </select>
     <p>per cup</p>

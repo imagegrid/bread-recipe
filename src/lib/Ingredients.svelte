@@ -3,7 +3,7 @@
     import FlourDropDown from './FlourDropDown.svelte';
     import HydrationDropDown from './HydrationDropDown.svelte';
     import Button from './Button.svelte';
-    import storage from '$lib/storage';
+    import storage from './storage';
     import { onMount } from 'svelte';
 
     export let loaves: number;
