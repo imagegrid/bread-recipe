@@ -22,6 +22,7 @@
         <option value={0.7}>70%</option>
         <option value={0.75}>75%</option>
         <option value={0.8}>80%</option>
+        <option value={0.9}>90%</option>
     </select>
     <p>Hydration</p>
 </div>

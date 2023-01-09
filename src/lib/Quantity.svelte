@@ -2,8 +2,11 @@
     import Subhead from './Subhead.svelte';
     import Button from './Button.svelte';
     import storage from './storage';
+    import PanSizeDropDown from './PanSizeDropDown.svelte';
 
     export let loaves: number;
+    export let panSize: number;
+    export let gramsPerLoaf: number;
 
     function increment() {
         loaves++;
@@ -24,7 +27,8 @@
         <p class="loaf-total noselect">{loaves}</p>
         <Button on:clicked={increment} round={true}><img src="/icons/plus.svg" alt="plus" /></Button>
     </div>
-    <p class="serving-size noselect">750g Loa{loaves > 1 ? 'ves' : 'f'}</p>
+    <p class="serving-size noselect">{gramsPerLoaf}g Loa{loaves > 1 ? 'ves' : 'f'}</p>
+    <PanSizeDropDown bind:panSize />
 </section>
 
 <style>

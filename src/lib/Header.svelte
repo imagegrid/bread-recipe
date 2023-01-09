@@ -9,14 +9,14 @@
 <style>
     h1 {
         font-family: var(--serif);
-        font-size: 44px;
+        font-size: 40px;
         font-weight: 400;
         line-height: 0.8;
         margin: 1.5rem 0 0;
         letter-spacing: -2px;
     }
     h1 span {
-        font-size: 18px;
+        font-size: 16px;
         font-family: var(--serif);
         font-weight: 700;
         text-transform: uppercase;

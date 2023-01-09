@@ -4,10 +4,12 @@
     import HydrationDropDown from './HydrationDropDown.svelte';
     import Button from './Button.svelte';
     import storage from './storage';
+    import Quantity from '$lib/Quantity.svelte';
+
     import { onMount } from 'svelte';
 
-    export let loaves: number;
-
+    let loaves = 1;
+    let panSize = 1.25;
     let metric = true;
     let flourGramsPerCup = 130;
     let hydration = 0.65;
@@ -20,11 +22,12 @@
     It produces an average sized loaf of around 750g, which may
     vary somewhat depending on the type of flour used.  */
 
-    $: flour = Math.round(450 * loaves);
+    $: flour = Math.round(flourGramsPerCup * panSize * loaves);
     $: water = Math.round((flour * hydration) / 10) * 10;
     $: salt = Math.round(flour * 0.02); /* 2% of flour */
     $: yeast = 8 * loaves; /* yeast sold in 8 gram packets. */
     $: fat = Math.round(flour * 0.02); /* 2% of flour */
+    $: gramsPerLoaf = Math.round((flour + water) / loaves);
 
     $: waterCups = convertToCups(water, waterGramsPerCup);
     $: flourCups = convertToCups(flour, flourGramsPerCup);
@@ -49,11 +52,13 @@
     }
     onMount(() => {
         metric = storage.get('metric') === false ? false : true;
+        loaves = storage.get('loaves') || 1;
     });
 </script>
 
 <section class="ingredients">
     <Subhead heading="Ingredients" />
+
     <div class="ingredients-content">
         <div class="ingredients-amounts">
             <ul>
@@ -83,6 +88,7 @@
     {#if !metric}
         <FlourDropDown bind:flourGramsPerCup />
     {/if}
+    <Quantity bind:loaves bind:panSize {gramsPerLoaf} />
 </section>
 
 <style>
@@ -92,7 +98,7 @@
     }
     .ingredients-amounts,
     .ingredients-names {
-        font-size: 36px;
+        font-size: 32px;
         font-family: var(--sans-serif);
         white-space: nowrap;
     }
