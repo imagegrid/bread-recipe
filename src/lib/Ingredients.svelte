@@ -9,7 +9,7 @@
     import { onMount } from 'svelte';
 
     let loaves = 1;
-    let panSize = 1.25;
+    let panSize = 3.5;
     let metric = true;
     let flourGramsPerCup = 130;
     let hydration = 0.65;
