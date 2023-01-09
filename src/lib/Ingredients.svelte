@@ -26,7 +26,7 @@
     $: water = Math.round((flour * hydration) / 10) * 10;
     $: salt = Math.round(flour * 0.02); /* 2% of flour */
     $: yeast = 8 * loaves; /* yeast sold in 8 gram packets. */
-    $: fat = Math.round(flour * 0.02); /* 2% of flour */
+    $: fat = Math.round(flour * 0.03); /* 2% of flour */
     $: gramsPerLoaf = Math.round((flour + water) / loaves);
 
     $: waterCups = convertToCups(water, waterGramsPerCup);
