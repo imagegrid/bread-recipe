@@ -17,7 +17,7 @@
     <select bind:value={panSize} name="hydration">
         <option value={3}>1</option>
         <option value={3.5}>1.25</option>
-        <option value={4}>1.5</option>
+        <option value={4.25}>1.5</option>
         <option value={5}>2</option>
     </select>
     <p>Pound Pan</p>
