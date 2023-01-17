@@ -97,7 +97,7 @@
     }
     .ingredients-amounts,
     .ingredients-names {
-        font-size: 30px;
+        font-size: 34px;
         font-family: var(--serif);
         white-space: nowrap;
     }
