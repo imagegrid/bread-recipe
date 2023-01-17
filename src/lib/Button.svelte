@@ -12,12 +12,13 @@
     }
 </script>
 
-<a href={''} class="button noselect" on:click={clicked} class:round class:small class:disabled><slot /></a>
+<button class="button noselect" on:click={clicked} class:round class:small class:disabled><slot /></button>
 
 <style>
     .button {
         display: flex;
         align-items: center;
+        font-size: 1rem;
         color: #000;
         background: rgb(252, 252, 252);
         background: linear-gradient(180deg, rgba(252, 252, 252, 1) 0%, rgba(204, 204, 204, 0.5) 100%);
@@ -26,6 +27,7 @@
         padding: 5px 15px;
         text-decoration: none;
         user-select: none;
+        cursor: pointer;
     }
     .button:active {
         background: rgb(224, 224, 224);

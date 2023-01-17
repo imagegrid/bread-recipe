@@ -9,11 +9,11 @@
 <style>
     h1 {
         font-family: var(--serif);
-        font-size: 40px;
+        font-size: 36px;
         font-weight: 400;
         line-height: 0.8;
-        margin: 1.5rem 0 0;
-        letter-spacing: -2px;
+        margin: 1.3rem 0 0;
+        letter-spacing: -1px;
     }
     h1 span {
         font-size: 16px;
@@ -21,7 +21,7 @@
         font-weight: 700;
         text-transform: uppercase;
         display: block;
-        letter-spacing: 2.5px;
-        margin-bottom: 1.2rem;
+        letter-spacing: 1.6px;
+        margin-bottom: 1rem;
     }
 </style>

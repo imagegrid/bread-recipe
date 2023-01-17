@@ -58,7 +58,6 @@
 
 <section class="ingredients">
     <Subhead heading="Ingredients" />
-
     <div class="ingredients-content">
         <div class="ingredients-amounts">
             <ul>
@@ -98,8 +97,8 @@
     }
     .ingredients-amounts,
     .ingredients-names {
-        font-size: 32px;
-        font-family: var(--sans-serif);
+        font-size: 30px;
+        font-family: var(--serif);
         white-space: nowrap;
     }
     .ingredients-amounts {
@@ -113,7 +112,7 @@
     .ingredients ul {
         padding: 0 5px;
         margin: 0;
-        line-height: 1.2em;
+        line-height: 1.25em;
     }
     .ingredients li {
         letter-spacing: -1px;
@@ -126,7 +125,7 @@
     .ingredients-convert {
         margin-top: 15px;
     }
-    .ingredients-convert a img {
+    .ingredients-convert button img {
         margin-right: 8px;
     }
     .ingredients-names li span {

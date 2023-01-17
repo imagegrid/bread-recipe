@@ -27,7 +27,7 @@
     .pansize {
         display: flex;
         justify-content: center;
-        margin: 30px 0 5px;
+        margin: 20px 0 5px;
     }
     .pansize p {
         margin: 2px 0 0;

@@ -4,6 +4,6 @@
     import Header from '$lib/Header.svelte';
 </script>
 
-<Header topText="George's">Bread Recipe</Header>
+<Header topText="George's Best">Bread Recipe</Header>
 <Ingredients />
 <Directions />
