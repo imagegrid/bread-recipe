@@ -20,7 +20,7 @@
         font-family: var(--serif);
         font-weight: 700;
         display: block;
-        letter-spacing: 1.5px;
+        letter-spacing: 4px;
         margin-bottom: 1.25rem;
     }
 </style>
