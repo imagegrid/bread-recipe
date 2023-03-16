@@ -21,6 +21,6 @@
         font-weight: 700;
         display: block;
         letter-spacing: 4px;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1rem;
     }
 </style>
