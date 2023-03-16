@@ -1,43 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Martel+Sans&family=Martel:wght@400;700&display=swap');
-
 :root {
-  --accent: #CA522D;
-  --sans-serif: 'Martel Sans', sans-serif;
-  --serif: 'Martel', serif;
+    --accent: #CA522D;
+    --sans-serif: system-ui,
+        sans-serif;
+    --serif: Charter,
+        'Bitstream Charter',
+        'Sitka Text',
+        Cambria,
+        serif;
 }
-html, body {
+
+html,
+body {
     margin: 0;
     padding: 0;
 }
+
 html {
     font-family: var(--sans-serif);
     color: #000;
 }
+
 body {
     margin-top: 10px;
 }
+
 header,
 section {
     width: 100%;
     text-align: center;
 }
+
 section {
     margin-bottom: 5px;
 }
+
 ul {
     list-style: none;
 }
+
 main {
     display: flex;
     flex-wrap: wrap;
 }
+
 .noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
-
-

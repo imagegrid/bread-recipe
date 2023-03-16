@@ -42,10 +42,10 @@
         justify-content: center;
     }
     .loaf-total {
-        font-family: var(--sans-serif);
+        font-family: var(--serif);
         color: var(--accent);
         font-size: 36px;
-        margin: -10px 15px;
+        margin: 0px 15px;
         padding: 0;
     }
 </style>
